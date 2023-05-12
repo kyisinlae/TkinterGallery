@@ -1,0 +1,23 @@
+Project Name: Tkinter Gallery Project
+
+- Menu
+	- Frame Layout
+	- Components
+		- Lable
+		- Entry
+		- Checkbox
+		- Switch
+		- Button
+		- Radio Button
+		- Combobox
+		- Scale
+		- Scrollbar
+		- Spinbox
+		- Progress bar
+		- Tab
+		- Treeview
+		- Message box
+		- Dialog Box
+		- Color Picker
+- Help
+	- About

@@ -49,15 +49,15 @@ def openEntryForm(root):
     age.grid(row=2, column=0)
     age_spinbox.grid(row=3, column=0)
 
-    nationality = tk.Label(formdesigner, text="Nationality", font="Tahoma 15")
-    nationality_combobox = ttk.Combobox(formdesigner, values=["America", "Myanmar", "China", "Africa", "Thailand", "India"], font="Tahoma 15")
-    nationality.grid(row=2, column=1)
-    nationality_combobox.grid(row=3, column=1)
+    # nationality = tk.Label(formdesigner, text="Nationality", font="Tahoma 15")
+    # nationality_combobox = ttk.Combobox(formdesigner, values=["America", "Myanmar", "China", "Africa", "Thailand", "India"], font="Tahoma 15")
+    # nationality.grid(row=2, column=1)
+    # nationality_combobox.grid(row=3, column=1)
     
-    title = tk.Label(formdesigner, text= "Title", font="Tahoma 15")
-    title_combobox = ttk.Combobox(formdesigner, values=["Mr.", "Ms."], font="Tahoma 15")
-    title.grid(row=2, column=2)
-    title_combobox.grid(row=3, column=2)
+    # title = tk.Label(formdesigner, text= "Title", font="Tahoma 15")
+    # title_combobox = ttk.Combobox(formdesigner, values=["Mr.", "Ms."], font="Tahoma 15")
+    # title.grid(row=2, column=2)
+    # title_combobox.grid(row=3, column=1)
     
     scroll_v = tk.Scrollbar(codeView)
     scroll_v.pack(side= tk.RIGHT,fill=tk.Y)

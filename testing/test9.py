@@ -4,7 +4,7 @@ from tkinter import *
 
 root = Tk()
 
-length_label = Label(root, text="Length").grid(row=0, column=0, pady=4, padx = 4)
+length_label = Label(root, text='').grid(row=0, column=0, pady=4, padx = 4)
 w2 = Scale(root, from_=0, to=100, tickinterval= 100, orient=HORIZONTAL, length=400)
 w2.set(50)
 w2.grid(row=0, column=1)

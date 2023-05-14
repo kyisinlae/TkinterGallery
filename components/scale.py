@@ -17,7 +17,7 @@ def openScale(root):
     codeView=ttk.Frame(panedwindow, width=100,relief=SUNKEN)
     formtitle=tk.Frame(formView, background="white")
     formtitle.pack(side="top", fill="x", anchor="center")
-    formlable = tk.Label(formtitle,text="Label", font="Tahoma 15", height=1, bg="white", pady=5)
+    formlable = tk.Label(formtitle,text="Scale", font="Tahoma 15", height=1, bg="white", pady=5)
     formlable.pack(side="top", anchor="center")
     formdesigner = tk.Frame(formView, background="white", padx=10,pady=10)
     formdesigner.pack(side="top", fill="both", expand=True)

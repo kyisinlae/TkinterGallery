@@ -33,7 +33,7 @@ def openAbout(root):
     image = Image.open("./images/tklogo1.png")
     resized_image= image.resize((150,150))
     img= ImageTk.PhotoImage(resized_image)
-    logoimage = tk.Label(frame4, image=img,relief=GROOVE)
+    logoimage = tk.Label(frame4, image=img,borderwidth=0, highlightthickness = 0)
     logoimage.pack()
     # logoimage.draw()
     
@@ -41,11 +41,17 @@ def openAbout(root):
     apptitle = Label(frame2, text='Tkinter Gallery', font="Helvetica 25 bold", padx=10,pady=10)
     apptitle.pack(side=TOP, anchor=W)
     
-    appdescription = Label(frame2, text='This is about tkinter, for basic learners.', font="Tahoma 10", padx=10,pady=10)
+    appdescription = Label(frame2, text=
+                           '''
+This is about tkinter, for basic learners. In Tkinter 
+Gallery you can learn basic layout and some components. 
+In next version we will upgrade new version which is 
+better than this version. Thank you all!
+                           ''', justify=LEFT, font="Tahoma 10", padx=10,pady=10)
     appdescription.pack(side=TOP, anchor=W)
     
     apppowerby = Label(frame1, text='Power by KSL and TKPK from LTE PY4Y B8', font="Tahoma 7", padx=10,pady=10)
-    apppowerby.pack(side=BOTTOM, anchor='center')
+    apppowerby.pack(side=BOTTOM, anchor='w')
     
    
    

@@ -2,8 +2,10 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import *
 import pyperclip as pc
+from tkinter import colorchooser
+from tkinter import messagebox
 
-def openTab(root):
+def openColorPicker(root):
     
     for widget in root.winfo_children():
         if isinstance(widget, ttk.PanedWindow):
@@ -25,17 +27,13 @@ def openTab(root):
     panedwindow.add(formView, weight=5)  
     panedwindow.add(codeView, weight=2)
     
-    tabControl = ttk.Notebook(formdesigner)
-  
-    tab1 = ttk.Frame(tabControl)
-    tab2 = ttk.Frame(tabControl)
+    def choose_color():
+        color_code = colorchooser.askcolor(title ="Choose color")
+        # print(color_code)
+        messagebox.showinfo("Color Code", color_code)
     
-    tabControl.add(tab1, text ='Tab 1')
-    tabControl.add(tab2, text ='Tab 2')
-    tabControl.pack(expand = 1, fill ="both")
-    
-    ttk.Label(tab1, text ="Welcome to Tkinter Gallery").grid(column = 0, row = 0,padx = 30,pady = 30)  
-    ttk.Label(tab2,text ="Lets go into the world of computers").grid(column = 0,row = 0, padx = 30,pady = 30)
+    button = Button(formdesigner, text = "Select color", command = choose_color)
+    button.pack()
     
     scroll_v = tk.Scrollbar(codeView)
     scroll_v.pack(side= tk.RIGHT,fill=tk.Y)
@@ -55,24 +53,23 @@ def openTab(root):
     insert_text = """
     
     
-    import tkinter as tk                    
-    from tkinter import ttk
+   
+    from tkinter import *
+    from tkinter import colorchooser
+    from tkinter import messagebox
     
-    
-    window = tk.Tk()
-    tabControl = ttk.Notebook(window)
-    
-    tab1 = ttk.Frame(tabControl)
-    tab2 = ttk.Frame(tabControl)
-    
-    tabControl.add(tab1, text ='Tab 1')
-    tabControl.add(tab2, text ='Tab 2')
-    tabControl.pack(expand = 1, fill ="both")
-    
-    ttk.Label(tab1, text ="Welcome to Tkinter Gallery").grid(column = 0, row = 0,padx = 30,pady = 30)  
-    ttk.Label(tab2,text ="Lets go into the world of computers").grid(column = 0,row = 0, padx = 30,pady = 30)
+    root = Tk()
+    root.geometry("300x300")
 
-    window.mainloop()  
+    def choose_color():
+        color_code = colorchooser.askcolor(title ="Choose color")
+        # print(color_code)
+        messagebox.showinfo("Color Code", color_code)
+        
+    button = Button(root, text = "Select color", command = choose_color)
+    button.pack()
+
+    root.mainloop()
     """
     
     text.insert(tk.END, insert_text)

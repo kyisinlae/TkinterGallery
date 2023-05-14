@@ -14,3 +14,11 @@ Spinbox - https://www.plus2net.com/python/tkinter-Spinbox.php
 frame Layout - https://stackoverflow.com/questions/4241036/how-do-i-center-a-frame-within-a-frame-in-tkinter
 
 Progress bar - https://www.pythontutorial.net/tkinter/tkinter-progressbar/
+
+Treeview - https://python-commandments.org/tkinter-treeview-widget/
+
+message box - https://www.geeksforgeeks.org/python-tkinter-messagebox-widget/
+
+color picker - https://www.geeksforgeeks.org/python-tkinter-choose-color-dialog/
+
+no border image - https://stackoverflow.com/questions/30457568/white-border-around-label-with-an-image

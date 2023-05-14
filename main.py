@@ -1,5 +1,6 @@
 from tkinter import Tk, Menu
 from tkinter import *
+from PIL import ImageTk, Image
 import frame_layout
 import components.label as label
 import about
@@ -15,6 +16,9 @@ import components.scrollbar as scrollbar
 import components.spinbox as spinbox
 import components.progressbar as progressbar
 import components.tab as tab
+import components.treeview as treeview
+import components.messagebox as messagebox
+import components.colorpicker as colorpicker
 
 def clickAbout():
     about.openAbout(root)
@@ -44,6 +48,12 @@ def clickProgressBar():
     progressbar.openProgressBar(root)
 def clickTab():
     tab.openTab(root)
+def clickTreeView():
+    treeview.openTreeView(root)
+def clickMessageBox():
+    messagebox.openMessageBox(root)
+def clickColorPicker():
+    colorpicker.openColorPicker(root)
     
 root = Tk()
 root.title('Tkinter Gallery Project')
@@ -71,10 +81,9 @@ sub_menu.add_command(label='Scrollbar', command=clickScrollBar)
 sub_menu.add_command(label='Spinbox', command=clickSpinBox)
 sub_menu.add_command(label='Progress bar', command=clickProgressBar)
 sub_menu.add_command(label='Tab', command=clickTab)
-sub_menu.add_command(label='Treeview')
-sub_menu.add_command(label='Message box')
-sub_menu.add_command(label='Dialog box')
-sub_menu.add_command(label='Color picker')
+sub_menu.add_command(label='Treeview', command=clickTreeView)
+sub_menu.add_command(label='Message box', command=clickMessageBox)
+sub_menu.add_command(label='Color picker', command=clickColorPicker)
 
 # add the File menu to the menubar
 file_menu.add_cascade(
@@ -113,6 +122,17 @@ menubar.add_cascade(
 )
 
 root.withdraw()
+
+frame3 = Frame(root, height= 150, width=150)
+frame3.place(in_=root, anchor="center",  relx=.5, rely=.5)
+
+image = Image.open("./images/tklogobg.png")
+
+resized_image= image.resize((300,300))
+img= ImageTk.PhotoImage(resized_image)
+
+Label(frame3, image=img, padx=0, pady=0, borderwidth=0, highlightthickness = 0, state='normal').pack()
+
 splash.show_splash(root)
 
 # root.geometry('800x600')
